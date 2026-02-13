@@ -7,6 +7,7 @@ import { AboutComponent } from '../../components/about/about';
 import { ReviewsComponent } from '../../components/reviews/reviews';
 import { ContactComponent } from '../../components/contact/contact';
 import { FooterComponent } from '../../components/footer/footer';
+import { LoadingComponent } from '../../components/loading/loading';
 
 @Component({
   selector: 'app-landing',
@@ -19,6 +20,7 @@ import { FooterComponent } from '../../components/footer/footer';
     ReviewsComponent,
     ContactComponent,
     FooterComponent,
+    LoadingComponent,
   ],
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
