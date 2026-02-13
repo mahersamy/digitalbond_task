@@ -1,0 +1,55 @@
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <h2 class="section-title animate-fade-up">CLIENTS REVIEWS</h2>
+    </div>
+
+    <div class="reviews-carousel">
+      <owl-carousel-o [options]="customOptions">
+        @for (review of reviews; track review.name) {
+          <ng-template carouselSlide>
+            <article class="review-card">
+              <!-- Avatar -->
+              <div class="avatar-wrapper">
+                <img
+                  [ngSrc]="review.avatar"
+                  width="100"
+                  height="100"
+                  [alt]="review.name"
+                  class="avatar"
+                />
+              </div>
+
+              <!-- Info -->
+              <div class="reviewer-info">
+                <h3>{{ review.name }}</h3>
+                <span class="role">{{ review.role }}</span>
+
+                <!-- Stars -->
+                <div class="stars">
+                  @for (star of [1, 2, 3, 4, 5]; track star) {
+                    <span class="star" [class.filled]="star <= review.rating">★</span>
+                  }
+                </div>
+              </div>
+
+              <!-- Quote - Centered -->
+              <div class="quote-content">
+                <span class="quote-icon">❝</span>
+                <p>{{ review.quote }}</p>
+              </div>
+            </article>
+          </ng-template>
+        }
+      </owl-carousel-o>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="decoration dec-left">
+      <div class="triangle-red"></div>
+    </div>
+    <div class="decoration dec-right">
+      <div class="plus-shape"><span></span><span></span></div>
+    </div>
+  </div>
+</section>

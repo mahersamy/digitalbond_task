@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.section-placeholder {
+  height: 18.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-gray);
+  color: var(--text-gray);
+  font-family: var(--font-heading);
+}

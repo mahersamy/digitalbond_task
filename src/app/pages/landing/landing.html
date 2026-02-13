@@ -1,0 +1,26 @@
+<app-header />
+
+<main>
+  <app-hero />
+
+  @defer (on viewport) {
+    <app-about />
+  } @placeholder {
+    <div class="section-placeholder">Loading About...</div>
+  }
+
+  @defer (on viewport) {
+    <app-reviews />
+  } @placeholder {
+    <div class="section-placeholder">Loading Reviews...</div>
+  }
+
+  @defer (on viewport) {
+    <app-contact />
+  } @placeholder {
+    <div class="section-placeholder">Loading Contact...</div>
+  }
+</main>
+
+<!-- Footer Section -->
+<app-footer />

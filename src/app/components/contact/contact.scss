@@ -1,0 +1,139 @@
+:host {
+  display: block;
+  padding: 5rem 0;
+  background-color: var(--bg-gray);
+  position: relative;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.contact-content {
+  flex: 1;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    text-align: left;
+    max-width: 40%;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+
+  .decoration-red-line {
+    width: 3.75rem;
+    height: 0.25rem;
+    background-color: var(--primary-red);
+    margin: 0 auto;
+
+    @media (min-width: 1024px) {
+      margin: 0;
+    }
+  }
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 37.5rem;
+  background-color: rgba(255, 255, 255, 0.03); /* Subtle glass effect */
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    font-weight: 600;
+    color: var(--text-white);
+    font-size: 0.95rem;
+  }
+
+  input,
+  textarea {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--text-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary-red);
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &.error {
+      border-color: #ff4d4d;
+    }
+  }
+
+  .error-msg {
+    color: #ff4d4d;
+    font-size: 0.85rem;
+  }
+}
+
+.btn-primary {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--primary-red);
+
+  &:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.375rem 1.25rem rgba(217, 35, 46, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.125rem 0.5rem rgba(217, 35, 46, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(39, 174, 96, 0.2);
+  border: 1px solid #27ae60;
+  color: #2ecc71;
+  border-radius: 0.375rem;
+  text-align: center;
+}

@@ -1,0 +1,59 @@
+<header class="scrolled">
+  <div class="container header-content">
+    <a routerLink="/" class="logo">
+      <img
+        ngSrc="logo.webp"
+        width="120"
+        height="120"
+        alt="Digital Bond Logo"
+        class="header-logo"
+        priority
+      />
+    </a>
+
+    <nav class="desktop-nav">
+      <ul>
+        @for (link of navLinks; track link.label) {
+          <li>
+            <a
+              [routerLink]="link.path"
+              [fragment]="link.fragment"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="social-icons">
+      @for (social of socialLinks; track social.icon) {
+        <a [href]="social.url" target="_blank" rel="noopener noreferrer" class="social-link">
+          <div class="icon-circle">
+            <i [class]="social.icon"></i>
+          </div>
+        </a>
+      }
+    </div>
+
+    <button class="mobile-toggle" (click)="toggleMobileMenu()" aria-label="Toggle navigation menu">
+      <i class="fa-solid fa-bars text-lg"></i>
+    </button>
+  </div>
+
+  <div class="mobile-nav" [class.open]="isMobileMenuOpen()">
+    <nav>
+      <ul>
+        @for (link of navLinks; track link.label) {
+          <li>
+            <a [routerLink]="link.path" [fragment]="link.fragment" (click)="toggleMobileMenu()">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
