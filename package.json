@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:digitalbon": "node dist/digitalbon/server/server.mjs"
+    "serve:ssr:digitalbon": "node dist/digitalbon/server/server.mjs",
+    "deploy": "ng build --configuration production --base-href=/digitalbond_task/ && npx angular-cli-ghpages --dir=dist/digitalbon/browser"
   },
   "prettier": {
     "printWidth": 100,
