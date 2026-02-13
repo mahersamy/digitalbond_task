@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
