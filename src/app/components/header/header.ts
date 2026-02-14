@@ -22,11 +22,11 @@ export class HeaderComponent {
   ];
 
   socialLinks = [
-    { icon: 'fa-brands fa-instagram', url: '#' },
-    { icon: 'fa-brands fa-facebook-f', url: '#' },
-    { icon: 'fa-brands fa-linkedin-in', url: '#' },
-    { icon: 'fa-brands fa-whatsapp', url: '#' },
-    { icon: 'fa-brands fa-tiktok', url: '#' },
+    { icon: 'fa-brands fa-instagram', url: '#', label: 'Instagram' },
+    { icon: 'fa-brands fa-facebook-f', url: '#', label: 'Facebook' },
+    { icon: 'fa-brands fa-linkedin-in', url: '#', label: 'LinkedIn' },
+    { icon: 'fa-brands fa-whatsapp', url: '#', label: 'WhatsApp' },
+    { icon: 'fa-brands fa-tiktok', url: '#', label: 'TikTok' },
   ];
 
   toggleMobileMenu() {

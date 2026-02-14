@@ -26,9 +26,14 @@
                 <span class="role">{{ review.role }}</span>
 
                 <!-- Stars -->
-                <div class="stars">
+                <div
+                  class="stars"
+                  [attr.aria-label]="'Rating: ' + review.rating + ' out of 5 stars'"
+                >
                   @for (star of [1, 2, 3, 4, 5]; track star) {
-                    <span class="star" [class.filled]="star <= review.rating">★</span>
+                    <span class="star" [class.filled]="star <= review.rating" aria-hidden="true"
+                      >★</span
+                    >
                   }
                 </div>
               </div>
@@ -43,7 +48,7 @@
       </owl-carousel-o>
     </div>
 
-    <div class="decoration dec-right rotate-center ">
+    <div class="decoration dec-right rotate-center">
       <div class="plus-shape"><span></span><span></span></div>
     </div>
   </div>
