@@ -30,8 +30,14 @@
 
     <div class="social-icons">
       @for (social of socialLinks; track social.icon) {
-        <a [href]="social.url" target="_blank" rel="noopener noreferrer" class="social-link">
-          <div class="icon-circle">
+        <a
+          [href]="social.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          [attr.aria-label]="social.label"
+        >
+          <div class="icon-circle" aria-hidden="true">
             <i [class]="social.icon"></i>
           </div>
         </a>
