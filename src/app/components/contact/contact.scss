@@ -103,29 +103,8 @@
 
 .btn-primary {
   margin-top: 1rem;
-  padding: 1rem 2rem;
   width: 100%;
-  border-radius: 0.375rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background-color: var(--primary-red);
-
-  &:hover {
-    background-color: var(--primary-red);
-    transform: translateY(-0.125rem);
-    box-shadow: 0 0.375rem 1.25rem rgba(217, 35, 46, 0.35);
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 0.125rem 0.5rem rgba(217, 35, 46, 0.25);
-  }
-
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
+  /* Inherits other styles from global .btn-primary */
 }
 
 .success-message {
