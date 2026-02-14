@@ -64,6 +64,11 @@ h6 {
   margin-bottom: 1rem;
   font-size: 3rem;
   font-weight: 700;
+  transition: letter-spacing 0.3s ease;
+
+  &:hover {
+    letter-spacing: 0.2em;
+  }
 }
 
 a {
@@ -177,4 +182,109 @@ img {
 }
 .delay-500 {
   animation-delay: 0.5s;
+}
+
+/* ===== Components & Elements ===== */
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  background-color: var(--primary-red);
+  color: var(--text-white);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  border: none;
+  border-radius: 0.375rem; 
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    background var(--transition-normal),
+    transform var(--transition-fast),
+    box-shadow var(--transition-normal);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.375rem 1.25rem rgba(217, 35, 46, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.125rem 0.5rem rgba(217, 35, 46, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/* Shapes */
+.triangle-red {
+  width: 0;
+  height: 0;
+  border-left: 1.25rem solid transparent;
+  border-right: 1.25rem solid transparent;
+  border-bottom: 2.5rem solid var(--primary-red);
+  transform: rotate(-15deg);
+}
+
+/* Global Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-1.5rem) rotate(5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0.625rem) rotate(-5deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-center {
+  animation: rotate-center 10s linear infinite;
+}
+
+.floating-fast {
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-slow {
+  animation: float-reverse 8s ease-in-out infinite;
 }

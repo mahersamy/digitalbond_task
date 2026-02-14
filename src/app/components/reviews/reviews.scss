@@ -96,12 +96,7 @@
   left: 5%;
 
   .triangle-red {
-    width: 0;
-    height: 0;
-    border-left: 1.25rem solid transparent;
-    border-right: 1.25rem solid transparent;
-    border-bottom: 2.5rem solid var(--primary-red);
-    transform: rotate(-15deg);
+    /* Base shape styles inherited from global .triangle-red */
 
     &::after {
       content: '';
@@ -124,10 +119,12 @@
     width: 2.5rem;
     height: 2.5rem;
     position: relative;
+    animation: rotate-center 10s linear infinite;
 
     span {
       position: absolute;
       background-color: var(--accent-black);
+      border-radius: 2px; /* Slight rounding for polish */
 
       &:first-child {
         width: 100%;
